@@ -10,18 +10,27 @@ variable "resource_group_output" {
   description = "list of resource group objects "
 }
 
+# variable "subnet_output" {
+#   description = "Map of subnet output"
+#   type        = map(any)
+#   default     = {}
+# }
+
+# variable "public_ip_output" {
+#   type        = any
+#   default     = []
+#   description = "list of public ip objects"
+# }
+
 variable "subnet_output" {
-  description = "Map of subnet output"
-  type        = map(any)
-  default     = {}
+  type = map
+  default = null
 }
 
 variable "public_ip_output" {
-  type        = any
-  default     = []
-  description = "list of public ip objects"
+  type = map
+  default = null
 }
-
 
 variable "default_values" {
   type        = any
