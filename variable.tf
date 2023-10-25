@@ -11,7 +11,7 @@ variable "resource_group_output" {
 }
 
 variable "subnet_output" {
-  type        = any
+  type        = map(any)
   default     = []
   description = "list of Subnet objects"
 }
