@@ -12,7 +12,7 @@ variable "resource_group_output" {
 
 variable "subnet_output" {
   description = "Map of subnet output"
-  type        = tuple
+  type        = map(any)
   default     = {}
 }
 
