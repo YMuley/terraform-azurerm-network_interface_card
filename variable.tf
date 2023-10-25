@@ -11,9 +11,9 @@ variable "resource_group_output" {
 }
 
 variable "subnet_output" {
+  description = "Map of subnet output"
   type        = map(any)
-  default     = []
-  description = "list of Subnet objects"
+  default     = {}
 }
 
 variable "public_ip_output" {
