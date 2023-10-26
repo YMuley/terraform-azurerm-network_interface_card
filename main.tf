@@ -13,7 +13,7 @@ resource "azurerm_network_interface" "network_interface_card" {
       name                          = ip_configuration.value.name
       subnet_id                     = lookup(var.subnet_output,format("%s/%s",ip_configuration.value.virtual_network_name,ip_configuration.value.subnet_name),null).id
       private_ip_address_allocation = ip_configuration.value.private_ip_address_allocation
-      public_ip_address_id          = ip_configuration.value.public_ip_name == null ? null : var.public_ip_output[ip_configuration.value.public_ip_name].id
+      public_ip_address_id          = ip_configuration.value.public_ip_name == null ? null : [ip_configuration.value.public_ip_name].id
       private_ip_address            = ip_configuration.value.private_ip_address_allocation == "static" ? ip_configuration.value.private_ip_address : null
     }
   }
