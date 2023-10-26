@@ -17,7 +17,7 @@ variable "subnet_output" {
 }
 
 variable "public_ip_output" {
-  type        = any
+  type        = map(any)
   default     = []
   description = "list of public ip objects"
 }
